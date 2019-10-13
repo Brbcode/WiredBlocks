@@ -2,6 +2,8 @@
 
 **Wired Blocks** is a mod for Minecraft [1.14.4] that adds several blocks with a custom redstone wire behavior.
 
+![Wired Block Video](https://raw.githubusercontent.com/Brbcode/WiredBlocks/master/gitHubImages/thumbnail.png)
+
 ## Getting Started
 
 Wired Blocks are orientable on x,y and z axes and only send power in that Direction.
