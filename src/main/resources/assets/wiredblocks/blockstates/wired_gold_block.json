@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_gold_block" },
+        "axis=z":   { "model": "wiredblocks:block/wired_gold_block_z"},
+        "axis=x":   { "model": "wiredblocks:block/wired_gold_block_x"}
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "BMR"
+    ],
+    "key":
+    {
+        "B": { "item": "minecraft:stripped_jungle_log" },
+        "M": { "item": "minecraft:iron_ingot" },
+        "R": { "item": "minecraft:redstone" }
+    },
+    "result": { "item": "wiredblocks:wired_stripped_jungle_log" }
+}

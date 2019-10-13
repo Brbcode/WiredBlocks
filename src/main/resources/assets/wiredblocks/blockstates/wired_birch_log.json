@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_birch_log" },
+        "axis=z":   { "model": "wiredblocks:block/wired_birch_log", "x": 90 },
+        "axis=x":   { "model": "wiredblocks:block/wired_birch_log", "x": 90, "y": 90 }
+    }
+}

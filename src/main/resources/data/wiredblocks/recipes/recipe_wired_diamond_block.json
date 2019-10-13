@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "BMR"
+    ],
+    "key":
+    {
+        "B": { "item": "minecraft:diamond_block" },
+        "M": { "item": "minecraft:iron_ingot" },
+        "R": { "item": "minecraft:redstone" }
+    },
+    "result": { "item": "wiredblocks:wired_diamond_block" }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_mossy_cobblestone" },
+        "axis=z":   { "model": "wiredblocks:block/wired_mossy_cobblestone_z"},
+        "axis=x":   { "model": "wiredblocks:block/wired_mossy_cobblestone_x"}
+    }
+}

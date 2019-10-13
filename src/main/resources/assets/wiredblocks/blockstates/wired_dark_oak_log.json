@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_dark_oak_log" },
+        "axis=z":   { "model": "wiredblocks:block/wired_dark_oak_log", "x": 90 },
+        "axis=x":   { "model": "wiredblocks:block/wired_dark_oak_log", "x": 90, "y": 90 }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "wiredblocks:block/wired_spruce_planks",
+	"textures": {
+	        "layer0": "wiredblocks:item/itemblock_texture"
+	    }
+}

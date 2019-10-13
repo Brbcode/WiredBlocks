@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "wiredblocks:block/wired_acacia_planks",
+        "side": "minecraft:block/acacia_planks"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_bricks" },
+        "axis=z":   { "model": "wiredblocks:block/wired_bricks_z"},
+        "axis=x":   { "model": "wiredblocks:block/wired_bricks_x"}
+    }
+}

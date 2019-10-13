@@ -1,0 +1,6 @@
+{
+    "parent": "wiredblocks:block/wired_bookshelf",
+	"textures": {
+	        "layer0": "wiredblocks:item/itemblock_texture"
+	    }
+}

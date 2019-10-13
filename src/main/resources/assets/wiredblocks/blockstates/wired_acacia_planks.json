@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "wiredblocks:block/wired_acacia_planks" },
+        "axis=z":   { "model": "wiredblocks:block/wired_acacia_planks_z"},
+        "axis=x":   { "model": "wiredblocks:block/wired_acacia_planks_x"}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "wiredblocks:block/wired_smooth_stone",
+        "side": "minecraft:block/smooth_stone"
+    }
+}
