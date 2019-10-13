@@ -33,7 +33,7 @@ Minecraft forge [1.14.4]
 
 ### Installing
 
-#TODO
+Dowload it from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/wired-blocks), move the jar file that you has downloaded and move it to your minecraft mods folder.
 
 ## Authors
 
