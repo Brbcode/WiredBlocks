@@ -6,6 +6,7 @@
 
 Wired Blocks are orientable on x,y and z axes and only send power in that Direction.
 Max lenght 15 blocks as redstone wire.
+
 ![Wired Blocks Display](https://raw.githubusercontent.com/Brbcode/WiredBlocks/master/gitHubImages/image_01.jpg)
 
 You can send power in any direction including up and down.
