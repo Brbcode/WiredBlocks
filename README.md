@@ -23,6 +23,7 @@ Craft your wired block and start build a new type of redstone constructions.
 Alpha
 ### Supported Blocks
 [Logs](https://minecraft.gamepedia.com/Log), [Planks](https://minecraft.gamepedia.com/Planks), [Stone](https://minecraft.gamepedia.com/Stone), [Cobblestone](https://minecraft.gamepedia.com/Cobblestone), [Stone Bricks](https://minecraft.gamepedia.com/Stone_Bricks), [Iron Block](https://minecraft.gamepedia.com/Block_of_Iron), [Bricks](https://minecraft.gamepedia.com/Bricks), [Gold Block](https://minecraft.gamepedia.com/Block_of_Gold), [Diamond Block](https://minecraft.gamepedia.com/Block_of_Diamond) and [Bookshelf](https://minecraft.gamepedia.com/Bookshelf)
+
 **Note:** Cracked brick stone is not aviable.
 ### Prerequisites
 
