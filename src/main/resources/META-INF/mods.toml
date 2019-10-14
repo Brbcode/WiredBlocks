@@ -14,12 +14,13 @@ displayName="Wired Blocks" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="http://example.com/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/wired-blocks" #optional
 # A text field displayed in the mod UI
 authors="Brbcode" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 This mod add several building block that can conduct the redstone power.
+Check home page for more info.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.wiredblocks]] #optional
