@@ -15,31 +15,34 @@ public class ModItems {
 	public static ItemGroup WIRED_ITEM_GROUP = new ItemGroup("Wired Blocks") {
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(ModBlocks.OAK_WIRED_LOG);
+			return new ItemStack(ModBlocks.WIRED_OAK_LOG);
 		}
 	};
 
-	public static final Item OAK_WIRED_LOG = register(ModBlocks.OAK_WIRED_LOG, WIRED_ITEM_GROUP);
-	public static final Item BIRCH_WIRED_LOG = register(ModBlocks.BIRCH_WIRED_LOG, WIRED_ITEM_GROUP);
-	public static final Item ACACIA_WIRED_LOG = register(ModBlocks.ACACIA_WIRED_LOG, WIRED_ITEM_GROUP);
-	public static final Item JUNGLE_WIRED_LOG = register(ModBlocks.JUNGLE_WIRED_LOG, WIRED_ITEM_GROUP);
-	public static final Item SPRUCE_WIRED_LOG = register(ModBlocks.SPRUCE_WIRED_LOG, WIRED_ITEM_GROUP);
-	public static final Item DARK_OAK_WIRED_LOG = register(ModBlocks.DARK_OAK_WIRED_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_OAK_LOG = register(ModBlocks.WIRED_OAK_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_SPRUCE_LOG = register(ModBlocks.WIRED_SPRUCE_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_BIRCH_LOG = register(ModBlocks.WIRED_BIRCH_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_JUNGLE_LOG = register(ModBlocks.WIRED_JUNGLE_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_ACACIA_LOG = register(ModBlocks.WIRED_ACACIA_LOG, WIRED_ITEM_GROUP);
+	public static final Item WIRED_DARK_OAK_LOG = register(ModBlocks.WIRED_DARK_OAK_LOG, WIRED_ITEM_GROUP);
+
+	public static final Item WIRED_STRIPPED_OAK_LOG = register(ModBlocks.WIRED_STRIPPED_OAK_LOG, WIRED_ITEM_GROUP);
 	public static final Item WIRED_STRIPPED_SPRUCE_LOG = register(ModBlocks.WIRED_STRIPPED_SPRUCE_LOG, WIRED_ITEM_GROUP);
  	public static final Item WIRED_STRIPPED_BIRCH_LOG = register(ModBlocks.WIRED_STRIPPED_BIRCH_LOG, WIRED_ITEM_GROUP);
 	public static final Item WIRED_STRIPPED_JUNGLE_LOG = register(ModBlocks.WIRED_STRIPPED_JUNGLE_LOG, WIRED_ITEM_GROUP);
 	public static final Item WIRED_STRIPPED_ACACIA_LOG = register(ModBlocks.WIRED_STRIPPED_ACACIA_LOG, WIRED_ITEM_GROUP);
 	public static final Item WIRED_STRIPPED_DARK_OAK_LOG = register(ModBlocks.WIRED_STRIPPED_DARK_OAK_LOG, WIRED_ITEM_GROUP);
-	public static final Item WIRED_STRIPPED_OAK_LOG = register(ModBlocks.WIRED_STRIPPED_OAK_LOG, WIRED_ITEM_GROUP);
-	public static final Item WIRED_STONE = register(ModBlocks.WIRED_STONE, WIRED_ITEM_GROUP);
+
 	public static final Item WIRED_OAK_PLANKS = register(ModBlocks.WIRED_OAK_PLANKS, WIRED_ITEM_GROUP);
-	public static final Item WIRED_ACACIA_PLANKS = register(ModBlocks.WIRED_ACACIA_PLANKS, WIRED_ITEM_GROUP);
-	public static final Item WIRED_JUNGLE_PLANKS = register(ModBlocks.WIRED_JUNGLE_PLANKS, WIRED_ITEM_GROUP);
-	public static final Item WIRED_DARK_OAK_PLANKS = register(ModBlocks.WIRED_DARK_OAK_PLANKS, WIRED_ITEM_GROUP);
-	public static final Item WIRED_BIRCH_PLANKS = register(ModBlocks.WIRED_BIRCH_PLANKS, WIRED_ITEM_GROUP);
 	public static final Item WIRED_SPRUCE_PLANKS = register(ModBlocks.WIRED_SPRUCE_PLANKS, WIRED_ITEM_GROUP);
-	public static final Item WIRED_COBBLESTONE = register(ModBlocks.WIRED_COBBLESTONE, WIRED_ITEM_GROUP);
+	public static final Item WIRED_BIRCH_PLANKS = register(ModBlocks.WIRED_BIRCH_PLANKS, WIRED_ITEM_GROUP);
+	public static final Item WIRED_JUNGLE_PLANKS = register(ModBlocks.WIRED_JUNGLE_PLANKS, WIRED_ITEM_GROUP);
+	public static final Item WIRED_ACACIA_PLANKS = register(ModBlocks.WIRED_ACACIA_PLANKS, WIRED_ITEM_GROUP);
+	public static final Item WIRED_DARK_OAK_PLANKS = register(ModBlocks.WIRED_DARK_OAK_PLANKS, WIRED_ITEM_GROUP);
+
+	public static final Item WIRED_STONE = register(ModBlocks.WIRED_STONE, WIRED_ITEM_GROUP);
 	public static final Item WIRED_SMOOTH_STONE = register(ModBlocks.WIRED_SMOOTH_STONE, WIRED_ITEM_GROUP);
+	public static final Item WIRED_COBBLESTONE = register(ModBlocks.WIRED_COBBLESTONE, WIRED_ITEM_GROUP);
 	public static final Item WIRED_MOSSY_COBBLESTONE = register(ModBlocks.WIRED_MOSSY_COBBLESTONE, WIRED_ITEM_GROUP);
 	public static final Item WIRED_STONE_BRICKS = register(ModBlocks.WIRED_STONE_BRICKS, WIRED_ITEM_GROUP);
 	public static final Item WIRED_MOSSY_STONE_BRICKS = register(ModBlocks.WIRED_MOSSY_STONE_BRICKS, WIRED_ITEM_GROUP);

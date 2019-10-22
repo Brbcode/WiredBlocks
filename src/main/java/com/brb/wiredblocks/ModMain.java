@@ -62,35 +62,40 @@ public class ModMain
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-        	blockRegistryEvent.getRegistry().register(ModBlocks.OAK_WIRED_LOG);				 //1
-        	blockRegistryEvent.getRegistry().register(ModBlocks.BIRCH_WIRED_LOG);		 	 //2
-        	blockRegistryEvent.getRegistry().register(ModBlocks.ACACIA_WIRED_LOG);			 //3
-        	blockRegistryEvent.getRegistry().register(ModBlocks.JUNGLE_WIRED_LOG);			 //4
-        	blockRegistryEvent.getRegistry().register(ModBlocks.SPRUCE_WIRED_LOG);			 //5
-        	blockRegistryEvent.getRegistry().register(ModBlocks.DARK_OAK_WIRED_LOG);		 //6
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_OAK_LOG);				 //1
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_SPRUCE_LOG);			 //2
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_BIRCH_LOG);		 	 //3
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_JUNGLE_LOG);			 //4
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_ACACIA_LOG);			 //5
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_DARK_OAK_LOG);		 //6
+
         	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_OAK_LOG);	 //7
-        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_BIRCH_LOG);	 //8
-        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_ACACIA_LOG);	 //9
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_SPRUCE_LOG);	 //8
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_BIRCH_LOG);	 //9
         	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_JUNGLE_LOG);	 //10
-        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_SPRUCE_LOG);	 //11
+        	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_ACACIA_LOG);	 //11
         	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STRIPPED_DARK_OAK_LOG);//12
+
         	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_STONE);
         }
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
-        	itemRegistryEvent.getRegistry().register(ModItems.OAK_WIRED_LOG);				//1
-        	itemRegistryEvent.getRegistry().register(ModItems.BIRCH_WIRED_LOG);				//2
-        	itemRegistryEvent.getRegistry().register(ModItems.ACACIA_WIRED_LOG);			//3
-        	itemRegistryEvent.getRegistry().register(ModItems.JUNGLE_WIRED_LOG);			//4
-        	itemRegistryEvent.getRegistry().register(ModItems.SPRUCE_WIRED_LOG);			//5
-        	itemRegistryEvent.getRegistry().register(ModItems.DARK_OAK_WIRED_LOG);			//6
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_ACACIA_LOG);	//7
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_BIRCH_LOG);	//8
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_DARK_OAK_LOG);	//9
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_SPRUCE_LOG);	//10
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_JUNGLE_LOG);	//11
-        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_OAK_LOG);		//12
+
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_OAK_LOG);				//1
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_SPRUCE_LOG);			//2
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_BIRCH_LOG);				//3
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_JUNGLE_LOG);			//4
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_ACACIA_LOG);			//5
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_DARK_OAK_LOG);			//6
+
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_OAK_LOG);		//7
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_SPRUCE_LOG);	//8
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_BIRCH_LOG);	//9
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_JUNGLE_LOG);	//10
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_ACACIA_LOG);	//11
+        	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_DARK_OAK_LOG);	//12
+
         	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STONE);
         }
     }
