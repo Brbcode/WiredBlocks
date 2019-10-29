@@ -24,7 +24,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class ModMain
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public ModMain() {
         // Register the setup method for modloading

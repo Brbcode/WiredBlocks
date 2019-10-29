@@ -9,6 +9,7 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
+import com.brb.wiredblocks.ModMain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.mojang.datafixers.util.Pair;
@@ -26,6 +27,7 @@ import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IBlockReader;
@@ -103,13 +105,8 @@ public class WiredBlock extends Block{
 		if (!this.canProvidePower) {
 	         return 0;
 		} else {
-			int i = blockState.get(POWER);
-			BlockState state_ops = blockAccess.getBlockState(pos.offset(side.getOpposite()));
-
-			if(state_ops.has(POWER))
-				return Math.max(0, i-1);
-			else
-				return i;
+			int i = blockState.get(POWER);						
+			return i;			
 	    }
 	}
 
@@ -206,13 +203,64 @@ public class WiredBlock extends Block{
 		return state;
 	}
 
+	private int getRedstonePowerFromNeighbors(World world, BlockPos pos, BlockState state) {
+		int i = 0;
+		for(Direction direction : Direction.values())
+		{
+			BlockPos offsetPos = pos.offset(direction);
+			BlockState bs = world.getBlockState(offsetPos);
+			
+			
+			ResourceLocation redstone_torch_rn = net.minecraft.block.Blocks.REDSTONE_TORCH.getRegistryName();
+			if(bs.getBlock().getRegistryName().equals(redstone_torch_rn))			
+				continue;
+			else if(bs.getBlock().canProvidePower(bs))
+			//if(bs.has(BlockStateProperties.POWERED) || bs.has(BlockStateProperties.POWER_0_15))			
+			{
+				int j = 0;
+				String namespace = bs.getBlock().getRegistryName().getNamespace();
+				if(namespace.equals("wiredblocks"))
+				{
+					Direction.Axis axis = bs.get(AXIS);
+					if( !(axisMap.get(axis).getFirst().equals(direction) 
+							||  axisMap.get(axis).getSecond().equals(direction) ))						
+						continue;
+					
+					j = bs.get(POWER);
+				}
+				else
+					j = world.getRedstonePower(offsetPos, direction);
+				
+				
+				
+				if(bs.has(BlockStateProperties.POWER_0_15))
+					j = Math.max(0, j-1);
+				
+				//String block_name = bs.getBlock().getRegistryName().toString();
+				//String extra = (bs.getBlock().canProvidePower(bs)?"true":"false");
+				//String output = String.format("[%s:%s=%d] + %s", block_name,direction,j,extra);
+				//ModMain.LOGGER.info(output);
+				
+				if (j >= 15) 
+		            return 15;		         
+
+		         if (j > i) 
+		            i = j;		         
+			}	
+		}
+		
+		return i;
+		//return world.getRedstonePowerFromNeighbors(pos);
+	}
+	
 	private BlockState func_212568_b(World world, BlockPos pos, BlockState state) {
 	      BlockState blockstate = state;
 	      int i = state.get(POWER);
 	      this.canProvidePower = false;
-	      int j = world.getRedstonePowerFromNeighbors(pos);
+	      int j = getRedstonePowerFromNeighbors(world,pos,state);
 	      this.canProvidePower = true;
 	      int k = 0;
+	      
 	      if (j < 15) {
 
 	         for(Direction direction : Direction.Plane.HORIZONTAL) {
