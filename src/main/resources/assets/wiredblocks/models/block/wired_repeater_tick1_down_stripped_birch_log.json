@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_y",
+    "textures": {
+		"bottom": "wiredblocks:block/repeater_d1u_stripped_birch_log_top",
+        "top": "wiredblocks:block/wired_stripped_birch_log_top",
+        "side": "minecraft:block/stripped_birch_log"
+    }
+}

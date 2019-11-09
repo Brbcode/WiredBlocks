@@ -16,18 +16,18 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModBlocks {
 
 	public static final WiredBlock WIRED_OAK_LOG = registerRotableWiredBlock("oak_log",ModInitData.OAK_LOG);
-	public static final WiredBlock WIRED_SPRUCE_LOG = registerWiredBlock("wired_spruce_log", ModInitData.SPRUCE_LOG);
-	public static final WiredBlock WIRED_BIRCH_LOG = registerWiredBlock("wired_birch_log", ModInitData.BIRCH_LOG);
-	public static final WiredBlock WIRED_JUNGLE_LOG = registerWiredBlock("wired_jungle_log", ModInitData.JUNGLE_LOG);
-	public static final WiredBlock WIRED_ACACIA_LOG = registerWiredBlock("wired_acacia_log", ModInitData.ACACIA_LOG);
-	public static final WiredBlock WIRED_DARK_OAK_LOG = registerWiredBlock("wired_dark_oak_log", ModInitData.DARK_OAK_LOG);
+	public static final WiredBlock WIRED_SPRUCE_LOG = registerRotableWiredBlock("spruce_log", ModInitData.SPRUCE_LOG);
+	public static final WiredBlock WIRED_BIRCH_LOG = registerRotableWiredBlock("birch_log", ModInitData.BIRCH_LOG);
+	public static final WiredBlock WIRED_JUNGLE_LOG = registerRotableWiredBlock("jungle_log", ModInitData.JUNGLE_LOG);
+	public static final WiredBlock WIRED_ACACIA_LOG = registerRotableWiredBlock("acacia_log", ModInitData.ACACIA_LOG);
+	public static final WiredBlock WIRED_DARK_OAK_LOG = registerRotableWiredBlock("dark_oak_log", ModInitData.DARK_OAK_LOG);
 
-	public static final WiredBlock WIRED_STRIPPED_OAK_LOG = registerWiredBlock("wired_stripped_oak_log", ModInitData.STRIPPED_OAK_LOG);
-	public static final WiredBlock WIRED_STRIPPED_SPRUCE_LOG = registerWiredBlock("wired_stripped_spruce_log", ModInitData.STRIPPED_SPRUCE_LOG);
- 	public static final WiredBlock WIRED_STRIPPED_BIRCH_LOG = registerWiredBlock("wired_stripped_birch_log", ModInitData.STRIPPED_BIRCH_LOG);
-	public static final WiredBlock WIRED_STRIPPED_JUNGLE_LOG = registerWiredBlock("wired_stripped_jungle_log", ModInitData.STRIPPED_JUNGLE_LOG);
-	public static final WiredBlock WIRED_STRIPPED_ACACIA_LOG = registerWiredBlock("wired_stripped_acacia_log", ModInitData.STRIPPED_ACACIA_LOG);
-	public static final WiredBlock WIRED_STRIPPED_DARK_OAK_LOG = registerWiredBlock("wired_stripped_dark_oak_log", ModInitData.STRIPPED_DARK_OAK_LOG);
+	public static final WiredBlock WIRED_STRIPPED_OAK_LOG = registerRotableWiredBlock("stripped_oak_log", ModInitData.STRIPPED_OAK_LOG);
+	public static final WiredBlock WIRED_STRIPPED_SPRUCE_LOG = registerRotableWiredBlock("stripped_spruce_log", ModInitData.STRIPPED_SPRUCE_LOG);
+ 	public static final WiredBlock WIRED_STRIPPED_BIRCH_LOG = registerRotableWiredBlock("stripped_birch_log", ModInitData.STRIPPED_BIRCH_LOG);
+	public static final WiredBlock WIRED_STRIPPED_JUNGLE_LOG = registerRotableWiredBlock("stripped_jungle_log", ModInitData.STRIPPED_JUNGLE_LOG);
+	public static final WiredBlock WIRED_STRIPPED_ACACIA_LOG = registerRotableWiredBlock("stripped_acacia_log", ModInitData.STRIPPED_ACACIA_LOG);
+	public static final WiredBlock WIRED_STRIPPED_DARK_OAK_LOG = registerRotableWiredBlock("stripped_dark_oak_log", ModInitData.STRIPPED_DARK_OAK_LOG);
 
 	public static final WiredBlock WIRED_OAK_PLANKS = registerWiredBlock("wired_oak_planks", ModInitData.OAK_PLANKS);
 	 private static final WiredBlock WIRED_OAK_PLANKS_X = registerWiredBlock("wired_oak_planks_x", ModInitData.OAK_PLANKS);

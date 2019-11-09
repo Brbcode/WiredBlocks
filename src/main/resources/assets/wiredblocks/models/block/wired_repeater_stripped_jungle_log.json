@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_y",
+    "textures": {
+		"top": "wiredblocks:block/repeater_d1u_stripped_jungle_log_top",
+        "bottom": "wiredblocks:block/wired_stripped_jungle_log_top",
+        "side": "minecraft:block/stripped_jungle_log"
+    }
+}

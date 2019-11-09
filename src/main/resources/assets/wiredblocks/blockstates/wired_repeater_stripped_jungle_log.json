@@ -1,0 +1,59 @@
+{
+    "variants": {
+        "delay=1,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_stripped_jungle_log" },
+		"delay=1,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_down_stripped_jungle_log" },
+		"delay=1,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_down_stripped_jungle_log" , "x": 90},
+		"delay=1,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_stripped_jungle_log" , "x": 90},
+		"delay=1,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=1,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=2,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_up_stripped_jungle_log" },
+		"delay=2,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_down_stripped_jungle_log" },
+		"delay=2,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_down_stripped_jungle_log" , "x": 90},
+		"delay=2,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_up_stripped_jungle_log" , "x": 90},
+		"delay=2,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=2,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=3,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_up_stripped_jungle_log" },
+		"delay=3,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_down_stripped_jungle_log" },
+		"delay=3,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_down_stripped_jungle_log" , "x": 90},
+		"delay=3,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_up_stripped_jungle_log" , "x": 90},
+		"delay=3,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=3,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=4,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_up_stripped_jungle_log" },
+		"delay=4,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_down_stripped_jungle_log" },
+		"delay=4,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_down_stripped_jungle_log" , "x": 90},
+		"delay=4,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_up_stripped_jungle_log" , "x": 90},
+		"delay=4,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=4,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=1,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_up_stripped_jungle_log" },
+		"delay=1,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_down_stripped_jungle_log" },
+		"delay=1,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_down_stripped_jungle_log" , "x": 90},
+		"delay=1,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_up_stripped_jungle_log" , "x": 90},
+		"delay=1,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=1,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=2,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_up_stripped_jungle_log" },
+		"delay=2,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_down_stripped_jungle_log" },
+		"delay=2,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_down_stripped_jungle_log" , "x": 90},
+		"delay=2,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_up_stripped_jungle_log" , "x": 90},
+		"delay=2,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=2,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=3,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_up_stripped_jungle_log" },
+		"delay=3,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_down_stripped_jungle_log" },
+		"delay=3,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_down_stripped_jungle_log" , "x": 90},
+		"delay=3,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_up_stripped_jungle_log" , "x": 90},
+		"delay=3,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=3,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_down_stripped_jungle_log" , "x": 90, "y": 90},
+		
+		"delay=4,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_up_stripped_jungle_log" },
+		"delay=4,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_down_stripped_jungle_log" },
+		"delay=4,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_down_stripped_jungle_log" , "x": 90},
+		"delay=4,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_up_stripped_jungle_log" , "x": 90},
+		"delay=4,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_up_stripped_jungle_log" , "x": 90, "y": 90},
+		"delay=4,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_down_stripped_jungle_log" , "x": 90, "y": 90}
+    }
+}

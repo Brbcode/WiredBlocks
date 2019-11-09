@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_y",
+    "textures": {
+		"bottom": "wiredblocks:block/repeater_d4u_acacia_log_top",
+        "top": "wiredblocks:block/wired_acacia_log_top",
+        "side": "minecraft:block/acacia_log"
+    }
+}
