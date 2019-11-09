@@ -5,11 +5,20 @@ import org.apache.logging.log4j.Logger;
 
 import com.brb.wiredblocks.init.ModBlocks;
 import com.brb.wiredblocks.init.ModItems;
+import com.brb.wiredblocks.models.Blocks.InvalidFaceException;
+import com.brb.wiredblocks.models.Blocks.UnregisteredBlockException;
+import com.brb.wiredblocks.models.Blocks.WiredBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -60,6 +69,7 @@ public class ModMain
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
         	blockRegistryEvent.getRegistry().register(ModBlocks.WIRED_OAK_LOG);				 //1
@@ -97,6 +107,41 @@ public class ModMain
         	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STRIPPED_DARK_OAK_LOG);	//12
 
         	itemRegistryEvent.getRegistry().register(ModItems.WIRED_STONE);
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = "wiredblocks")
+    public static class Eventlistener﻿ {
+
+    	@SubscribeEvent
+        public static void onRightClicked(PlayerInteractEvent.RightClickBlock event) {
+    		ItemStack hand = event.getItemStack();
+    		Item handItem = hand.getItem();
+    		World world = event.getWorld();
+    		BlockState block_state =  world.getBlockState(event.getPos());
+            Block block = block_state.getBlock();
+            if(handItem.getRegistryName().equals(net.minecraft.item.Items.REPEATER.getRegistryName())
+            		&& block instanceof WiredBlock)
+            {
+            	WiredBlock wiredblock = (WiredBlock) block;
+            	Direction face = event.getFace();
+            	try {
+					BlockState repeaterState = wiredblock.getRepeater(block_state, face);
+					event.setCanceled(true);
+	            	world.setBlockState(event.getPos(), repeaterState);
+	            	if(!event.getPlayer().isCreative())
+	            		hand.setCount(hand.getCount()-1);
+	            	event.setCancellationResult(ActionResultType.SUCCESS);
+				} catch (InvalidFaceException e) {
+					LOGGER.info("not valid face.");
+				} catch (UnregisteredBlockException e) {
+					LOGGER.error(e.getMessage());
+					event.setCanceled(true);
+					event.setCancellationResult(ActionResultType.SUCCESS);
+				}
+
+            }
+
         }
     }
 }

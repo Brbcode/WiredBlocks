@@ -53,6 +53,8 @@ public class ModItems {
 	public static final Item WIRED_GOLD_BLOCK = register(ModBlocks.WIRED_GOLD_BLOCK, WIRED_ITEM_GROUP);
 	public static final Item WIRED_BOOKSHELF = register(ModBlocks.WIRED_BOOKSHELF, WIRED_ITEM_GROUP);
 
+	//public static final Item WIRED_TEST_REPEATER = register(ModBlocks.WIRED_REPEATER_OAK_LOG, WIRED_ITEM_GROUP);
+
 
 	private static Item register(Block p_221545_0_) {
 		return register(new BlockItem(p_221545_0_, new Item.Properties()));

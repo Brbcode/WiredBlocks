@@ -9,7 +9,6 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-import com.brb.wiredblocks.ModMain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.mojang.datafixers.util.Pair;
@@ -37,6 +36,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class WiredBlock extends Block{
 
+	private WiredRepeaterBlock repeater;
 	private final MaterialColor verticalColor;
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 	public static final IntegerProperty POWER = BlockStateProperties.POWER_0_15;
@@ -77,7 +77,6 @@ public class WiredBlock extends Block{
 	    		  		: this.materialColor);
 	   }
 
-
 	@Override
 	public void fillStateContainer(StateContainer.Builder<Block,BlockState> builder) {
 		super.fillStateContainer(builder);
@@ -105,11 +104,10 @@ public class WiredBlock extends Block{
 		if (!this.canProvidePower) {
 	         return 0;
 		} else {
-			int i = blockState.get(POWER);						
-			return i;			
+			int i = blockState.get(POWER);
+			return i;
 	    }
 	}
-
 
 	private int maxSignal(int existingSignal, BlockState neighbor) {
 		if (neighbor.getBlock() != this) {
@@ -119,7 +117,6 @@ public class WiredBlock extends Block{
 			return i > existingSignal ? i : existingSignal;
 		}
 	}
-
 
 	@Override
 	public void onBlockAdded(BlockState state, World worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
@@ -209,50 +206,50 @@ public class WiredBlock extends Block{
 		{
 			BlockPos offsetPos = pos.offset(direction);
 			BlockState bs = world.getBlockState(offsetPos);
-			
-			
+
+
 			ResourceLocation redstone_torch_rn = net.minecraft.block.Blocks.REDSTONE_TORCH.getRegistryName();
-			if(bs.getBlock().getRegistryName().equals(redstone_torch_rn))			
+			if(bs.getBlock().getRegistryName().equals(redstone_torch_rn))
 				continue;
 			else if(bs.getBlock().canProvidePower(bs))
-			//if(bs.has(BlockStateProperties.POWERED) || bs.has(BlockStateProperties.POWER_0_15))			
+			//if(bs.has(BlockStateProperties.POWERED) || bs.has(BlockStateProperties.POWER_0_15))
 			{
 				int j = 0;
-				String namespace = bs.getBlock().getRegistryName().getNamespace();
-				if(namespace.equals("wiredblocks"))
+				//String namespace = .getRegistryName().getNamespace();
+				if(bs.getBlock() instanceof WiredBlock)
 				{
 					Direction.Axis axis = bs.get(AXIS);
-					if( !(axisMap.get(axis).getFirst().equals(direction) 
-							||  axisMap.get(axis).getSecond().equals(direction) ))						
+					if( !(axisMap.get(axis).getFirst().equals(direction)
+							||  axisMap.get(axis).getSecond().equals(direction) ))
 						continue;
-					
+
 					j = bs.get(POWER);
 				}
 				else
 					j = world.getRedstonePower(offsetPos, direction);
-				
-				
-				
+
+
+
 				if(bs.has(BlockStateProperties.POWER_0_15))
 					j = Math.max(0, j-1);
-				
+
 				//String block_name = bs.getBlock().getRegistryName().toString();
 				//String extra = (bs.getBlock().canProvidePower(bs)?"true":"false");
 				//String output = String.format("[%s:%s=%d] + %s", block_name,direction,j,extra);
 				//ModMain.LOGGER.info(output);
-				
-				if (j >= 15) 
-		            return 15;		         
 
-		         if (j > i) 
-		            i = j;		         
-			}	
+				if (j >= 15)
+		            return 15;
+
+		         if (j > i)
+		            i = j;
+			}
 		}
-		
+
 		return i;
 		//return world.getRedstonePowerFromNeighbors(pos);
 	}
-	
+
 	private BlockState func_212568_b(World world, BlockPos pos, BlockState state) {
 	      BlockState blockstate = state;
 	      int i = state.get(POWER);
@@ -260,7 +257,7 @@ public class WiredBlock extends Block{
 	      int j = getRedstonePowerFromNeighbors(world,pos,state);
 	      this.canProvidePower = true;
 	      int k = 0;
-	      
+
 	      if (j < 15) {
 
 	         for(Direction direction : Direction.Plane.HORIZONTAL) {
@@ -462,7 +459,29 @@ public class WiredBlock extends Block{
 		}
 	}
 
+	public MaterialColor getVerticalColor() {
+		return this.verticalColor;
+	}
 
+	public BlockState getRepeater(BlockState wiredblock, Direction face) throws InvalidFaceException, UnregisteredBlockException {
+
+
+		if(!(wiredblock.getBlock() instanceof WiredBlock))
+			throw new IllegalArgumentException("The input block state is not a WiredBlock");
+		Direction.Axis axis = wiredblock.get(WiredBlock.AXIS);
+		Pair<Direction,Direction> possibleFaces = axisMap.get(axis);
+		if( !(possibleFaces.getFirst()==face || possibleFaces.getSecond()==face) )
+			throw new InvalidFaceException();
+
+		if(repeater==null)
+    		throw new UnregisteredBlockException(wiredblock);
+
+		return repeater.getDefaultState().with(BlockStateProperties.FACING, face);
+	}
+
+	public void setRepeater(WiredRepeaterBlock repeater) {
+		this.repeater = repeater;
+	}
 
 }
 
