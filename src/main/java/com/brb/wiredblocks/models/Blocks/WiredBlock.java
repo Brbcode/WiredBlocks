@@ -105,7 +105,16 @@ public class WiredBlock extends Block{
 	         return 0;
 		} else {
 			int i = blockState.get(POWER);
-			return i;
+			Direction.Axis axis = blockState.get(AXIS);
+			BlockState oppositeBlockState = blockAccess.getBlockState(pos.offset(side.getOpposite()));
+			if(axisMap.get(axis).getFirst()==side || axisMap.get(axis).getSecond()==side)
+				return i;
+			if(oppositeBlockState.has(BlockStateProperties.POWER_0_15) ||
+					oppositeBlockState.has(BlockStateProperties.LIT) ||
+					oppositeBlockState.has(BlockStateProperties.POWERED) ||
+					oppositeBlockState.has(BlockStateProperties.EXTENDED))
+				return i;
+			return 0;
 	    }
 	}
 
