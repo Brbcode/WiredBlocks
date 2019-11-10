@@ -49,9 +49,9 @@ public class ModBlocks {
 	 private static final WiredBlock WIRED_DARK_OAK_PLANKS_X = registerWiredBlock("wired_dark_oak_planks_x", ModInitData.DARK_OAK_PLANKS);
 	 private static final WiredBlock WIRED_DARK_OAK_PLANKS_Z = registerWiredBlock("wired_dark_oak_planks_z", ModInitData.DARK_OAK_PLANKS);
 
-	public static final WiredBlock WIRED_STONE = registerWiredBlock("wired_stone", ModInitData.STONE);
-	 private static final WiredBlock WIRED_STONE_X = registerWiredBlock("wired_stone_x", ModInitData.STONE);
-	 private static final WiredBlock WIRED_STONE_Z = registerWiredBlock("wired_stone_z", ModInitData.STONE);
+	public static final WiredBlock WIRED_STONE = registerUnrotableWiredBlock("stone", ModInitData.STONE);
+	 //private static final WiredBlock WIRED_STONE_X = registerWiredBlock("wired_stone_x", ModInitData.STONE);
+	 //private static final WiredBlock WIRED_STONE_Z = registerWiredBlock("wired_stone_z", ModInitData.STONE);
 	public static final WiredBlock WIRED_SMOOTH_STONE = registerWiredBlock("wired_smooth_stone", ModInitData.SMOOTH_STONE);
 	 private static final WiredBlock WIRED_SMOOTH_STONE_X = registerWiredBlock("wired_smooth_stone_x", ModInitData.SMOOTH_STONE);
 	 private static final WiredBlock WIRED_SMOOTH_STONE_Y = registerWiredBlock("wired_smooth_stone_z", ModInitData.SMOOTH_STONE);
