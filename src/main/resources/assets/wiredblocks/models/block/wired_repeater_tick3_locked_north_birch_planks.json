@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_z",
+    "textures": {
+		"bottom": "wiredblocks:block/repeater_d3l_birch_planks",
+        "top": "wiredblocks:block/wired_birch_planks",
+        "side": "minecraft:block/birch_planks"
+    }
+}

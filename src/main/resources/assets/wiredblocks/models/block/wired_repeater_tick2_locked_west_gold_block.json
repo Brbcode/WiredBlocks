@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_x",
+    "textures": {
+		"top": "wiredblocks:block/repeater_d2l_gold_block",
+        "bottom": "wiredblocks:block/wired_gold_block",
+        "side": "minecraft:block/gold_block"
+    }
+}

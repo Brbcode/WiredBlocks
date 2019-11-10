@@ -1,0 +1,60 @@
+{
+    "variants": {
+        "delay=1,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_smooth_stone" },
+		"delay=1,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_down_smooth_stone" },
+		"delay=1,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_south_smooth_stone" },
+		"delay=1,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_north_smooth_stone" },
+		"delay=1,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_east_smooth_stone" },
+		"delay=1,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick1_west_smooth_stone" },
+		
+		"delay=2,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_up_smooth_stone" },
+		"delay=2,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_down_smooth_stone" },
+		"delay=2,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_south_smooth_stone" },
+		"delay=2,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_north_smooth_stone" },
+		"delay=2,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_east_smooth_stone" },
+		"delay=2,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick2_west_smooth_stone" },
+		
+		"delay=3,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_up_smooth_stone" },
+		"delay=3,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_down_smooth_stone" },
+		"delay=3,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_south_smooth_stone" },
+		"delay=3,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_north_smooth_stone" },
+		"delay=3,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_east_smooth_stone" },
+		"delay=3,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick3_west_smooth_stone" },
+		
+		"delay=4,facing=up,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_up_smooth_stone" },
+		"delay=4,facing=down,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_down_smooth_stone" },
+		"delay=4,facing=south,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_south_smooth_stone" },
+		"delay=4,facing=north,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_north_smooth_stone" },
+		"delay=4,facing=east,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_east_smooth_stone" },
+		"delay=4,facing=west,locked=false":  { "model": "wiredblocks:block/wired_repeater_tick4_west_smooth_stone" },
+		
+		"delay=1,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_up_smooth_stone" },
+		"delay=1,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_down_smooth_stone" },
+		"delay=1,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_south_smooth_stone" },
+		"delay=1,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_north_smooth_stone" },
+		"delay=1,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_east_smooth_stone" },
+		"delay=1,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick1_locked_west_smooth_stone" },
+		
+		"delay=2,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_up_smooth_stone" },
+		"delay=2,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_down_smooth_stone" },
+		"delay=2,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_south_smooth_stone" },
+		"delay=2,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_north_smooth_stone" },
+		"delay=2,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_east_smooth_stone" },
+		"delay=2,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick2_locked_west_smooth_stone" },
+		
+		"delay=3,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_up_smooth_stone" },
+		"delay=3,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_down_smooth_stone" },
+		"delay=3,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_south_smooth_stone" },
+		"delay=3,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_north_smooth_stone" },
+		"delay=3,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_east_smooth_stone" },
+		"delay=3,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick3_locked_west_smooth_stone" },
+		
+		"delay=4,facing=up,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_up_smooth_stone" },
+		"delay=4,facing=down,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_down_smooth_stone" },
+		"delay=4,facing=south,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_south_smooth_stone" },
+		"delay=4,facing=north,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_north_smooth_stone" },
+		"delay=4,facing=east,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_east_smooth_stone" },
+		"delay=4,facing=west,locked=true":  { "model": "wiredblocks:block/wired_repeater_tick4_locked_west_smooth_stone" }
+		
+    }
+}

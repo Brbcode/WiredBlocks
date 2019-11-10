@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_x",
+    "textures": {
+		"top": "wiredblocks:block/repeater_d2u_jungle_planks",
+        "bottom": "wiredblocks:block/wired_jungle_planks",
+        "side": "minecraft:block/jungle_planks"
+    }
+}

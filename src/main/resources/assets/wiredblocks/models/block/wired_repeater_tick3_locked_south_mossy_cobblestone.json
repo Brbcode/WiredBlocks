@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_z",
+    "textures": {
+		"top": "wiredblocks:block/repeater_d3l_mossy_cobblestone",
+        "bottom": "wiredblocks:block/wired_mossy_cobblestone",
+        "side": "minecraft:block/mossy_cobblestone"
+    }
+}

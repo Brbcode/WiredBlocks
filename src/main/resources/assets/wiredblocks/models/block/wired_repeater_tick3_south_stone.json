@@ -2,7 +2,7 @@
     "parent": "wiredblocks:block/cube_facing_z",
     "textures": {
 		"top": "wiredblocks:block/repeater_d3u_stone",
-        "bottom": "wiredblocks:block/wired_stone_top",
+        "bottom": "wiredblocks:block/wired_stone",
         "side": "minecraft:block/stone"
     }
 }

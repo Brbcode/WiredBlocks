@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_z",
+    "textures": {
+		"bottom": "wiredblocks:block/repeater_d3u_chiseled_stone",
+        "top": "wiredblocks:block/wired_chiseled_stone",
+        "side": "minecraft:block/chiseled_stone"
+    }
+}

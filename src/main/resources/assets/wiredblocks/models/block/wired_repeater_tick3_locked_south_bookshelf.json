@@ -1,0 +1,12 @@
+{
+"parent": "block/cube", 
+	"textures": {
+        "particle": "minecraft:block/bookshelf",
+        "down": "minecraft:block/oak_planks",
+        "up": "minecraft:block/oak_planks",
+        "north": "wiredblocks:block/wired_oak_planks",
+        "south": "wiredblocks:block/repeater_d3l_oak_planks",
+        "east": "minecraft:block/bookshelf",
+        "west": "minecraft:block/bookshelf"
+    }
+}

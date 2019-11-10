@@ -1,0 +1,8 @@
+{
+    "parent": "wiredblocks:block/cube_facing_x",
+    "textures": {
+		"top": "wiredblocks:block/repeater_d1u_bricks",
+        "bottom": "wiredblocks:block/wired_bricks",
+        "side": "minecraft:block/bricks"
+    }
+}
