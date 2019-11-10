@@ -6,6 +6,7 @@ import com.brb.wiredblocks.models.Blocks.WiredBlock;
 import com.brb.wiredblocks.models.Blocks.WiredRepeaterBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -72,19 +73,19 @@ public class ModBlocks {
 
 	public static final WiredBlock WIRED_BRICKS = registerWiredBlock("wired_bricks", ModInitData.BRICKS);
 	 private static final WiredBlock WIRED_BRICKS_X = registerWiredBlock("wired_bricks_x", ModInitData.BRICKS);
-	 private static final WiredBlock WIRED_BRICKS_Y = registerWiredBlock("wired_bricks_z", ModInitData.BRICKS);
+	 private static final WiredBlock WIRED_BRICKS_Z = registerWiredBlock("wired_bricks_z", ModInitData.BRICKS);
 	public static final WiredBlock WIRED_IRON_BLOCK = registerWiredBlock("wired_iron_block", ModInitData.IRON_BLOCK);
 	 private static final WiredBlock WIRED_IRON_BLOCK_X = registerWiredBlock("wired_iron_block_x", ModInitData.IRON_BLOCK);
-	 private static final WiredBlock WIRED_IRON_BLOCK_Y = registerWiredBlock("wired_iron_block_z", ModInitData.IRON_BLOCK);
+	 private static final WiredBlock WIRED_IRON_BLOCK_Z = registerWiredBlock("wired_iron_block_z", ModInitData.IRON_BLOCK);
 	public static final WiredBlock WIRED_DIAMOND_BLOCK = registerWiredBlock("wired_diamond_block", ModInitData.DIAMOND_BLOCK);
 	 private static final WiredBlock WIRED_DIAMOND_BLOCK_X = registerWiredBlock("wired_diamond_block_x", ModInitData.DIAMOND_BLOCK);
-	 private static final WiredBlock WIRED_DIAMOND_BLOCK_Y = registerWiredBlock("wired_diamond_block_z", ModInitData.DIAMOND_BLOCK);
+	 private static final WiredBlock WIRED_DIAMOND_BLOCK_Z = registerWiredBlock("wired_diamond_block_z", ModInitData.DIAMOND_BLOCK);
 	public static final WiredBlock WIRED_GOLD_BLOCK = registerWiredBlock("wired_gold_block", ModInitData.GOLD_BLOCK);
 	 private static final WiredBlock WIRED_GOLD_BLOCK_X = registerWiredBlock("wired_gold_block_x", ModInitData.GOLD_BLOCK);
-	 private static final WiredBlock WIRED_GOLD_BLOCK_Y = registerWiredBlock("wired_gold_block_z", ModInitData.GOLD_BLOCK);
+	 private static final WiredBlock WIRED_GOLD_BLOCK_Z = registerWiredBlock("wired_gold_block_z", ModInitData.GOLD_BLOCK);
 	public static final WiredBlock WIRED_BOOKSHELF = registerWiredBlock("wired_bookshelf", ModInitData.BOOKSHELF);
 	 private static final WiredBlock WIRED_BOOKSHELF_X = registerWiredBlock("wired_bookshelf_x", ModInitData.BOOKSHELF);
-	 private static final WiredBlock WIRED_BOOKSHELF_Y = registerWiredBlock("wired_bookshelf_z", ModInitData.BOOKSHELF);
+	 private static final WiredBlock WIRED_BOOKSHELF_Z = registerWiredBlock("wired_bookshelf_z", ModInitData.BOOKSHELF);
 
 
 	private static HashMap<ResourceLocation,Block> repeaterMatch = new HashMap<>();
@@ -112,12 +113,37 @@ public class ModBlocks {
 		return wiredBlock;
 	}
 
+	private static WiredBlock registerUnrotableWiredBlock(String key,ModInitData.Data data) {
+		String wiredBlock_key = "wired_"+key;
+		WiredRepeaterBlock repeater = registerRepeater(key,1,false,Direction.UP,data,null);;
+		ModInitData.Data otherData = data;
+		for(int tick = 1; tick <=4 ;tick++)
+		{
+			for (Direction face : Direction.values()) {
+				if(tick!=1 && face!=Direction.UP)
+					registerRepeater(key,tick,false,face,data,repeater);
+				registerRepeater(key,tick,true,face,data,repeater);
+			}
+		}
+
+		WiredBlock wiredBlock = registerWiredBlock2(key,data);
+		Block.Properties loot_properties = data.getPropertiesClone().lootFrom(wiredBlock);
+		registerWiredBlock2(key+"_x",data.materialColor,loot_properties);
+		registerWiredBlock2(key+"_z",data.materialColor,loot_properties);
+		wiredBlock.setRepeater(repeater);
+		return wiredBlock;
+	}
+
 	private static WiredBlock registerWiredBlock2(String key,ModInitData.Data data) {
+		return registerWiredBlock2(key,data.materialColor,data.properties);
+	}
+
+	private static WiredBlock registerWiredBlock2(String key,MaterialColor color,Block.Properties properties) {
 		key = "wired_"+key;
-		if(data.materialColor!=null)
-			return (WiredBlock) register(key,new WiredBlock(data.materialColor,data.properties));
+		if(color!=null)
+			return (WiredBlock) register(key,new WiredBlock(color,properties));
 		else
-			return (WiredBlock) register(key,new WiredBlock(data.properties));
+			return (WiredBlock) register(key,new WiredBlock(properties));
 	}
 
 	private static WiredBlock registerWiredBlock(String key,ModInitData.Data data) {
