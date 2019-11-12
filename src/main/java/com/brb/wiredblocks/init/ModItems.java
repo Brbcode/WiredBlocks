@@ -5,8 +5,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @SuppressWarnings("unused")
 @net.minecraftforge.registries.ObjectHolder("wiredblocks")
@@ -53,8 +53,11 @@ public class ModItems {
 	public static final Item WIRED_GOLD_BLOCK = register(ModBlocks.WIRED_GOLD_BLOCK, WIRED_ITEM_GROUP);
 	public static final Item WIRED_BOOKSHELF = register(ModBlocks.WIRED_BOOKSHELF, WIRED_ITEM_GROUP);
 
-	//public static final Item WIRED_TEST_REPEATER = register(ModBlocks.WIRED_REPEATER_OAK_LOG, WIRED_ITEM_GROUP);
 
+	public static void registerAll(RegistryEvent.Register<Item> event) {
+        // Workaround for Forge event bus bug
+        if (!event.getName().equals(ForgeRegistries.ITEMS.getRegistryName())) return;
+	}
 
 	private static Item register(Block p_221545_0_) {
 		return register(new BlockItem(p_221545_0_, new Item.Properties()));
@@ -68,22 +71,12 @@ public class ModItems {
 		return register(p_221543_0_.getBlock(), p_221543_0_);
 	}
 
-	@SuppressWarnings("deprecation")
-	protected static Item register(Block p_221546_0_, Item p_221546_1_) {
-		return register(Registry.BLOCK.getKey(p_221546_0_), p_221546_1_);
+
+	protected static Item register(Block block, Item item) {
+		item.setRegistryName(block.getRegistryName());
+		ForgeRegistries.ITEMS.register(item);
+		return item;
 	}
 
-	private static Item register(String key, Item p_221547_1_) {
-		return register(new ResourceLocation(key), p_221547_1_);
-	}
-
-	@SuppressWarnings("deprecation")
-	private static Item register(ResourceLocation key, Item p_221544_1_) {
-		if (p_221544_1_ instanceof BlockItem) {
-			((BlockItem)p_221544_1_).addToBlockToItemMap(Item.BLOCK_TO_ITEM, p_221544_1_);
-		}
-
-		return Registry.register(Registry.ITEM, key, p_221544_1_);
-	}
 
 }

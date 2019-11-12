@@ -1,12 +1,15 @@
 package com.brb.wiredblocks.init;
 
+import com.brb.wiredblocks.ModMain;
 import com.brb.wiredblocks.models.Blocks.WiredBlock;
 import com.brb.wiredblocks.models.Blocks.WiredRepeaterBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.Direction;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 @SuppressWarnings("unused")
@@ -48,23 +51,22 @@ public class ModBlocks {
 	public static final WiredBlock WIRED_GOLD_BLOCK = registerUnrotableWiredBlock("gold_block", ModInitData.GOLD_BLOCK);
 	public static final WiredBlock WIRED_BOOKSHELF = registerUnrotableWiredBlock("bookshelf", ModInitData.BOOKSHELF);
 
-	@SuppressWarnings("deprecation")
-	private static Block register(String key, Block p_222382_1_) {
-		return Registry.register(Registry.BLOCK, "wiredblocks:"+key, p_222382_1_);
+	public static void registerAll(RegistryEvent.Register<Block> event) {
+        // Workaround for Forge event bus bug
+        if (!event.getName().equals(ForgeRegistries.BLOCKS.getRegistryName())) return;
+    }
+
+ 	private static Block register(String name, Block block) {
+ 		ResourceLocation id = ModMain.getId(name);
+ 		block.setRegistryName(id);
+ 		ForgeRegistries.BLOCKS.register(block);
+ 		return block;
 	}
 
 	private static WiredBlock registerRotableWiredBlock(String key,ModInitData.Data data) {
 		String wiredBlock_key = "wired_"+key;
 		WiredRepeaterBlock repeater = registerRepeater(key,1,false,Direction.UP,data,null);;
 		ModInitData.Data otherData = data;
-		for(int tick = 1; tick <=4 ;tick++)
-		{
-			if(tick!=1)
-				registerRepeater(key,tick,false,Direction.UP,data,repeater);
-			registerRepeater(key,tick,true,Direction.UP,data,repeater);
-			registerRepeater(key,tick,false,Direction.DOWN,data,repeater);
-			registerRepeater(key,tick,true,Direction.DOWN,data,repeater);
-		}
 
 		WiredBlock wiredBlock = registerWiredBlock2(key,data);
 		wiredBlock.setRepeater(repeater);
@@ -75,19 +77,9 @@ public class ModBlocks {
 		String wiredBlock_key = "wired_"+key;
 		WiredRepeaterBlock repeater = registerRepeater(key,1,false,Direction.UP,data,null);;
 		ModInitData.Data otherData = data;
-		for(int tick = 1; tick <=4 ;tick++)
-		{
-			for (Direction face : Direction.values()) {
-				if(tick!=1 && face!=Direction.UP)
-					registerRepeater(key,tick,false,face,data,repeater);
-				registerRepeater(key,tick,true,face,data,repeater);
-			}
-		}
 
 		WiredBlock wiredBlock = registerWiredBlock2(key,data);
 		Block.Properties loot_properties = data.getPropertiesClone().lootFrom(wiredBlock);
-		registerWiredBlock2(key+"_x",data.materialColor,loot_properties);
-		registerWiredBlock2(key+"_z",data.materialColor,loot_properties);
 		wiredBlock.setRepeater(repeater);
 		return wiredBlock;
 	}
